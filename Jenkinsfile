@@ -4,7 +4,9 @@
  * Jenkinsfile
  */
 pipeline {
-    agent any
+    agent {
+        label 'kubernetes || ba1'
+    } 
     options {
         buildDiscarder(
             // Only keep the 10 most recent builds
